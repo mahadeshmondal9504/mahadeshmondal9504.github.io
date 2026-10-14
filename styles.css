@@ -59,6 +59,11 @@ body {
 }
 
 .nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); font-weight: 600; }
+
+/* ---------- Page header (sub-pages) ---------- */
+.page-head { padding-top: 3rem; padding-bottom: 0.5rem; }
+.page-head h1 { font-size: 2rem; margin: 0.3rem 0 0; }
 
 /* ---------- Hero ---------- */
 .hero {
