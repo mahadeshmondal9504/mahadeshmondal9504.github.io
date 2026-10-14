@@ -236,15 +236,40 @@ body {
 .cite-label { color: var(--muted); }
 .cite-divider { width: 1px; align-self: stretch; background: var(--border); margin: 0 0.5rem; }
 
-/* ---------- Research themes ---------- */
-.theme {
-  margin-bottom: 2rem;
-  padding-left: 1.2rem;
-  border-left: 2px solid var(--border);
+/* ---------- Research themes (boxes) ---------- */
+.themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.2rem;
 }
-.theme:last-child { margin-bottom: 0; }
 
-.theme h3 { font-size: 1.1rem; margin-bottom: 0.7rem; }
+.theme-box {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.theme-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.theme-bg span {
+  position: absolute;
+  opacity: 0.13;
+  animation: floaty 10s ease-in-out infinite alternate;
+}
+
+.theme-box h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+}
 
 .theme-num {
   color: var(--accent);
@@ -254,21 +279,23 @@ body {
   margin-right: 0.5rem;
 }
 
-.theme-items {
+.theme-box .theme-items {
+  position: relative;
+  z-index: 1;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.4rem;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
-.theme-items li {
+.theme-box .theme-items li {
   position: relative;
   padding-left: 1.1rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.93rem;
 }
 
-.theme-items li::before {
+.theme-box .theme-items li::before {
   content: "▸";
   position: absolute;
   left: 0;
