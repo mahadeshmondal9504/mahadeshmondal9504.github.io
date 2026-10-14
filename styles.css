@@ -234,6 +234,7 @@ body {
 
 .cite-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; }
 .cite-label { color: var(--muted); }
+.cite-divider { width: 1px; align-self: stretch; background: var(--border); margin: 0 0.5rem; }
 
 /* ---------- Timeline (Education) ---------- */
 .timeline { position: relative; padding-left: 1.8rem; }
