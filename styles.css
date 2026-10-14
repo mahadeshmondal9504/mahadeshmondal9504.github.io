@@ -61,6 +61,25 @@ body {
 .nav-links a:hover { color: var(--accent); }
 .nav-links a.active { color: var(--accent); font-weight: 600; }
 
+/* ---------- Top contact strip ---------- */
+.top-contact {
+  border-bottom: 1px solid var(--border);
+  background: rgba(20, 27, 41, 0.6);
+  text-align: center;
+  padding: 0.35rem 1rem;
+  font-size: 0.82rem;
+}
+
+.top-contact a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 0.4rem;
+  white-space: nowrap;
+}
+
+.top-contact a:hover { color: var(--accent); }
+.top-contact .sep { color: var(--border); }
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
