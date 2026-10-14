@@ -61,23 +61,6 @@ body {
 .nav-links a:hover { color: var(--accent); }
 .nav-links a.active { color: var(--accent); font-weight: 600; }
 
-/* ---------- Top contact strip ---------- */
-.top-contact {
-  padding: 0.5rem 1.5rem 0;
-  font-size: 0.82rem;
-  text-align: right;
-}
-
-.top-contact a {
-  display: block;
-  color: var(--muted);
-  text-decoration: none;
-  line-height: 1.7;
-}
-
-.top-contact a:hover { color: var(--accent); }
-.top-contact a span { color: var(--ink); font-weight: 600; margin-right: 0.35rem; }
-
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
