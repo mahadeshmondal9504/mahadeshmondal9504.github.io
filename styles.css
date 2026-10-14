@@ -63,22 +63,20 @@ body {
 
 /* ---------- Top contact strip ---------- */
 .top-contact {
-  border-bottom: 1px solid var(--border);
-  background: rgba(20, 27, 41, 0.6);
-  text-align: center;
-  padding: 0.35rem 1rem;
+  padding: 0.5rem 1.5rem 0;
   font-size: 0.82rem;
+  text-align: right;
 }
 
 .top-contact a {
+  display: block;
   color: var(--muted);
   text-decoration: none;
-  margin: 0 0.4rem;
-  white-space: nowrap;
+  line-height: 1.7;
 }
 
 .top-contact a:hover { color: var(--accent); }
-.top-contact .sep { color: var(--border); }
+.top-contact a span { color: var(--ink); font-weight: 600; margin-right: 0.35rem; }
 
 /* ---------- Hero ---------- */
 .hero {
