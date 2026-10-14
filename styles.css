@@ -232,6 +232,15 @@ body {
 .tech { font-size: 0.82rem; color: var(--muted); }
 
 /* ---------- Skills ---------- */
+.skill-group { margin-bottom: 1.8rem; }
+.skill-group:last-child { margin-bottom: 0; }
+
+.skill-group h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.7rem; }
 
 .tags li {
