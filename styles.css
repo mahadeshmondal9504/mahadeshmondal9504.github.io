@@ -193,6 +193,48 @@ body {
 .section p { margin-bottom: 1rem; color: var(--ink); }
 .section p:last-child { margin-bottom: 0; }
 
+/* ---------- Metrics (bar chart) ---------- */
+.metrics { max-width: 640px; }
+
+.metric { margin-bottom: 1.1rem; }
+
+.metric-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.metric-num { font-weight: 700; }
+
+.metric-bar {
+  height: 10px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.metric-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4a6fd4, var(--accent));
+  animation: grow 1s ease-out;
+}
+
+@keyframes grow { from { width: 0; } }
+
+.cite-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.cite-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.cite-label { color: var(--muted); }
+
 /* ---------- Timeline (Education) ---------- */
 .timeline { position: relative; padding-left: 1.8rem; }
 
