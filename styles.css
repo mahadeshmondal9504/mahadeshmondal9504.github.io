@@ -236,6 +236,45 @@ body {
 .cite-label { color: var(--muted); }
 .cite-divider { width: 1px; align-self: stretch; background: var(--border); margin: 0 0.5rem; }
 
+/* ---------- Research themes ---------- */
+.theme {
+  margin-bottom: 2rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--border);
+}
+.theme:last-child { margin-bottom: 0; }
+
+.theme h3 { font-size: 1.1rem; margin-bottom: 0.7rem; }
+
+.theme-num {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin-right: 0.5rem;
+}
+
+.theme-items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+}
+
+.theme-items li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.theme-items li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
 /* ---------- Timeline (Education) ---------- */
 .timeline { position: relative; padding-left: 1.8rem; }
 
