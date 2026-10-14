@@ -1,13 +1,13 @@
 /* Research portfolio — clean academic theme, no dependencies */
 
 :root {
-  --bg: #fafbfc;
-  --surface: #ffffff;
-  --ink: #1a2332;
-  --muted: #5b6472;
-  --accent: #1d4ed8;
-  --accent-soft: #e8eefc;
-  --border: #e3e8ef;
+  --bg: #0b0f17;
+  --surface: #141b29;
+  --ink: #e9edf4;
+  --muted: #9aa5b8;
+  --accent: #6b96ff;
+  --accent-soft: #1b2540;
+  --border: #243044;
   --radius: 12px;
 }
 
@@ -27,7 +27,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(11, 15, 23, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -163,7 +163,7 @@ body {
 .btn-primary {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.28);
+  box-shadow: 0 4px 14px rgba(107, 150, 255, 0.30);
 }
 
 .btn-primary:hover { transform: translateY(-2px); }
@@ -210,7 +210,7 @@ body {
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(26, 35, 50, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
 }
 
 .card h3 { font-size: 1.08rem; margin-bottom: 0.5rem; }
