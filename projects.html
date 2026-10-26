@@ -43,7 +43,7 @@
         <p class="exp-label">Research Output</p>
         <div class="exp-output">
           <div class="exp-stat exp-toggle" id="pubToggle" aria-expanded="false" title="Click to view the articles"><span class="exp-num">2</span><span class="exp-stat-label">Published articles</span><span class="exp-chevron">&#9662;</span></div>
-          <div class="exp-stat"><span class="exp-num">2</span><span class="exp-stat-label">Manuscripts under review</span></div>
+          <div class="exp-stat exp-toggle" id="msToggle" aria-expanded="false" title="Click to view the manuscripts"><span class="exp-num">2</span><span class="exp-stat-label">Manuscripts under review</span><span class="exp-chevron">&#9662;</span></div>
           <div class="exp-stat exp-toggle" id="projToggle" aria-expanded="false" title="Click to view the project"><span class="exp-num">1</span><span class="exp-stat-label">Ongoing project</span><span class="exp-chevron">&#9662;</span></div>
         </div>
         <div class="exp-dropdown" id="pubDropdown">
@@ -74,6 +74,20 @@
               <p class="pub-title">Sustainable Chicken Feather-Derived Waste Natural Fiber-Reinforced Reduced Graphene Oxide (rGO)/g-C&#8323;N&#8324; Ternary Composite for Environmental Assay &amp; Visible-Light-Driven Photocatalytic Degradation of Organic Dyes</p>
               <p class="pub-authors"><strong class="me">Mahadesh Chandro Mondal</strong>, A. M. Sarwaruddin Chowdhury</p>
               <p class="pub-meta">University of Dhaka &middot; <a class="pub-type" href="#project-ongoing" title="Go to the project card">Ongoing Project</a></p>
+            </li>
+          </ol>
+        </div>
+        <div class="exp-dropdown" id="msDropdown">
+          <ol class="pub-list">
+            <li class="pub">
+              <p class="pub-title">Computational Design and Evaluation of Chr-CH2-Naphthyl Derivative Targeting the MCL-1 BH3-Binding Groove via Molecular Docking and Dynamic Simulations for Apoptosis-Based Cancer Therapy</p>
+              <p class="pub-authors"><strong class="me">Mahadesh Chandro Mondal</strong>, Md. Jabbir Ali, et al.</p>
+              <p class="pub-meta"><em>Pharmacological Research - Reports</em> &middot; Manuscript No. PREREP-D-26-00437 &middot; <span class="pub-type">Under Review</span></p>
+            </li>
+            <li class="pub">
+              <p class="pub-title">Functionalization and Ligand Conjugation of Novel Chitosan Nanoparticles for Targeted Drug Delivery System: A Review</p>
+              <p class="pub-authors"><strong class="me">Mahadesh Chandro Mondal</strong>, Arpita Dutta, A. M. Sarwaruddin Chowdhury</p>
+              <p class="pub-meta"><span class="pub-type">Under Review</span></p>
             </li>
           </ol>
         </div>
@@ -136,7 +150,7 @@
         var d = document.getElementById(dropId);
         return (t && d) ? { t: t, d: d } : null;
       }
-      var pairs = [wire('pubToggle', 'pubDropdown'), wire('projToggle', 'projDropdown')].filter(Boolean);
+      var pairs = [wire('pubToggle', 'pubDropdown'), wire('projToggle', 'projDropdown'), wire('msToggle', 'msDropdown')].filter(Boolean);
       pairs.forEach(function (p) {
         p.t.addEventListener('click', function () {
           var willOpen = !p.d.classList.contains('open');
