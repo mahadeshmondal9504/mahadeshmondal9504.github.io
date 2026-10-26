@@ -608,10 +608,3 @@ body {
 
 .exp-dropdown { display: none; margin-top: 0.8rem; }
 .exp-dropdown.open { display: block; }
-
-.exp-paper { padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
-.exp-paper:last-child { border-bottom: none; }
-.exp-paper-title { font-weight: 600; margin-bottom: 0.2rem; }
-.exp-paper-title a { color: var(--ink); text-decoration: none; }
-.exp-paper-title a:hover { color: var(--accent); }
-.exp-paper-meta { color: var(--muted); font-size: 0.88rem; }
