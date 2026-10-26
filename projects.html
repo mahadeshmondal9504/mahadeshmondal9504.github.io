@@ -44,7 +44,7 @@
         <div class="exp-output">
           <div class="exp-stat exp-toggle" id="pubToggle" aria-expanded="false" title="Click to view the articles"><span class="exp-num">2</span><span class="exp-stat-label">Published articles</span><span class="exp-chevron">&#9662;</span></div>
           <div class="exp-stat"><span class="exp-num">2</span><span class="exp-stat-label">Manuscripts under review</span></div>
-          <div class="exp-stat"><span class="exp-num">1</span><span class="exp-stat-label">Ongoing project</span></div>
+          <div class="exp-stat exp-toggle" id="projToggle" aria-expanded="false" title="Click to view the project"><span class="exp-num">1</span><span class="exp-stat-label">Ongoing project</span><span class="exp-chevron">&#9662;</span></div>
         </div>
         <div class="exp-dropdown" id="pubDropdown">
           <ol class="pub-list">
@@ -66,6 +66,14 @@
             <a href="https://link.springer.com/journal/44174" target="_blank" rel="noopener">Journal page</a>
           </p>
         </li>
+          </ol>
+        </div>
+        <div class="exp-dropdown" id="projDropdown">
+          <ol class="pub-list">
+            <li class="pub">
+              <p class="pub-title">Sustainable Chicken Feather-Derived Waste Natural Fiber-Reinforced Reduced Graphene Oxide (rGO)/g-C&#8323;N&#8324; Ternary Composite for Environmental Assay &amp; Visible-Light-Driven Photocatalytic Degradation of Organic Dyes</p>
+              <p class="pub-meta">Under Prof. Dr. A. M. Sarwaruddin Chowdhury, University of Dhaka &middot; <span class="pub-type">Ongoing Project</span></p>
+            </li>
           </ol>
         </div>
         <div class="exp-divider"></div>
@@ -105,13 +113,22 @@
 
   <script>
     (function () {
-      var t = document.getElementById('pubToggle');
-      var d = document.getElementById('pubDropdown');
-      if (!t || !d) return;
-      t.addEventListener('click', function () {
-        var open = d.classList.toggle('open');
-        t.classList.toggle('open', open);
-        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      function wire(toggleId, dropId) {
+        var t = document.getElementById(toggleId);
+        var d = document.getElementById(dropId);
+        return (t && d) ? { t: t, d: d } : null;
+      }
+      var pairs = [wire('pubToggle', 'pubDropdown'), wire('projToggle', 'projDropdown')].filter(Boolean);
+      pairs.forEach(function (p) {
+        p.t.addEventListener('click', function () {
+          var willOpen = !p.d.classList.contains('open');
+          pairs.forEach(function (q) {
+            var on = (q === p) && willOpen;
+            q.d.classList.toggle('open', on);
+            q.t.classList.toggle('open', on);
+            q.t.setAttribute('aria-expanded', on ? 'true' : 'false');
+          });
+        });
       });
     })();
   </script>
