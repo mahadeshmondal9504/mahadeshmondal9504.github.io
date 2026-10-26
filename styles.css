@@ -453,3 +453,79 @@ body {
   .hero { padding: 3.5rem 1.2rem 3rem; }
   .float-icon { opacity: 0.09; }
 }
+
+/* ---------- Certificates ---------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0;
+  cursor: zoom-in;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.cert-thumb {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: #0d1320;
+  display: block;
+}
+
+.cert-card figcaption { padding: 0.9rem 1rem 1rem; }
+.cert-card h4 { font-size: 1rem; margin: 0 0 0.3rem; }
+.cert-card p { color: var(--muted); font-size: 0.85rem; margin: 0; }
+.cert-card .badge { margin-bottom: 0.5rem; }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 10, 0.93);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: min(1100px, 95vw);
+  max-height: 82vh;
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox p {
+  color: var(--muted);
+  margin-top: 0.9rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.lb-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.2rem;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
