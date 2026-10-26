@@ -612,3 +612,6 @@ body {
 a.pub-type { text-decoration: none; cursor: pointer; }
 a.pub-type:hover { filter: brightness(1.35); text-decoration: none; }
 .card:target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+a.badge-link { text-decoration: none; }
+a.badge-link:hover { filter: brightness(1.35); text-decoration: none; }
