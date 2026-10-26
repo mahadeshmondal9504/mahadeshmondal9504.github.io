@@ -608,3 +608,7 @@ body {
 
 .exp-dropdown { display: none; margin-top: 0.8rem; }
 .exp-dropdown.open { display: block; }
+
+.proj-jump { color: inherit; text-decoration: none; cursor: pointer; }
+.proj-jump:hover { color: var(--accent); }
+.card:target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
