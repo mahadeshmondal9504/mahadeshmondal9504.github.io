@@ -24,7 +24,7 @@
 
   <main>
 <!-- RESEARCH EXPERIENCE OVERVIEW -->
-    <section class="section">
+    <section class="section" id="experience">
       <div class="exp-card">
         <p class="exp-kicker">Research Experience &middot; 01</p>
         <h2 class="exp-title">Undergraduate Research Assistant</h2>
@@ -97,6 +97,7 @@
           <h3>Sustainable Chicken Feather-Derived Waste Natural Fiber-Reinforced Reduced Graphene Oxide (rGO)/g-C&#8323;N&#8324; Ternary Composite for Environmental Assay &amp; Visible-Light-Driven Photocatalytic Degradation of Organic Dyes</h3>
           <p>Ongoing project under Prof. Dr. A. M. Sarwaruddin Chowdhury, University of Dhaka &mdash; turning poultry waste feathers into a functional ternary-composite photocatalyst for environmental assay and visible-light-driven degradation of organic dyes.</p>
           <p class="tech">Photocatalysis &middot; Composite Materials &middot; Environmental Remediation</p>
+          <p class="pub-links"><a href="#experience" data-open-target="projDropdown">View in Research Experience &uarr;</a></p>
         </div>
         <div class="card">
           <span class="badge">In progress</span>
@@ -126,6 +127,17 @@
         return (t && d) ? { t: t, d: d } : null;
       }
       var pairs = [wire('pubToggle', 'pubDropdown'), wire('projToggle', 'projDropdown')].filter(Boolean);
+      document.querySelectorAll('[data-open-target]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var id = link.getAttribute('data-open-target');
+          pairs.forEach(function (q) {
+            var on = q.d.id === id;
+            q.d.classList.toggle('open', on);
+            q.t.classList.toggle('open', on);
+            q.t.setAttribute('aria-expanded', on ? 'true' : 'false');
+          });
+        });
+      });
       pairs.forEach(function (p) {
         p.t.addEventListener('click', function () {
           var willOpen = !p.d.classList.contains('open');
