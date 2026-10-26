@@ -609,6 +609,6 @@ body {
 .exp-dropdown { display: none; margin-top: 0.8rem; }
 .exp-dropdown.open { display: block; }
 
-.proj-jump { color: inherit; text-decoration: none; cursor: pointer; }
-.proj-jump:hover { color: var(--accent); }
+a.pub-type { text-decoration: none; cursor: pointer; }
+a.pub-type:hover { filter: brightness(1.35); text-decoration: none; }
 .card:target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
